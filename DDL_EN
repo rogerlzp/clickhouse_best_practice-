@@ -11,3 +11,10 @@
 There was an error on [node3:9000]: Code: 36, e.displayText() = DB::Exception: Storage policy for Distributed table, 
 should have exactly one volume (version 20.8.2.3 (official build)) (version 20.8.2.3 (official build))
 Solution:
+When create Distributed table, the volume shoule be single, either set it in /etc/clickhouse-server/config.xml as default, 
+or set it in /etc/clickhouse-server/config.d/config_disk.xml: 
+         <volumes>
+           <single>
+               <disk>distribue1</disk>
+           </single>
+         </volumes>
