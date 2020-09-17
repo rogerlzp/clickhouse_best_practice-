@@ -1,0 +1,4 @@
+ Clickhouse Version: 20.8.2.3
+ Error: When create tables, got the error "There is no RW access to disk disk10 (/mnt/disk10/clickhouse/)"  
+ Solution: add read/write permission on /mnt/disk10/clickhouse/ to clickhouse:clickhouse 
+  
