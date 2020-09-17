@@ -1,4 +1,13 @@
  Clickhouse Version: 20.8.2.3
- Error: When create tables, got the error "There is no RW access to disk disk10 (/mnt/disk10/clickhouse/)"  
- Solution: add read/write permission on /mnt/disk10/clickhouse/ to clickhouse:clickhouse 
+ 
+ 1. Error: 
+ When create tables, got the error "There is no RW access to disk disk10 (/mnt/disk10/clickhouse/)"  
+ Solution: 
+ add read/write permission on /mnt/disk10/clickhouse/ to clickhouse:clickhouse 
   
+
+
+2. Error: [36] ClickHouse exception, code: 36, host: null, port: 0; Code: 36, e.displayText() = DB::Exception: 
+There was an error on [node3:9000]: Code: 36, e.displayText() = DB::Exception: Storage policy for Distributed table, 
+should have exactly one volume (version 20.8.2.3 (official build)) (version 20.8.2.3 (official build))
+Solution:
